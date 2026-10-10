@@ -1,0 +1,14 @@
+datasets/
+runs/
+outputs/
+models/pretrained/
+assets/
+*.private.*
+*.har
+*.log
+*.jsonl
+.env*
+.venv/
+venv/
+__pycache__/
+*.pyc

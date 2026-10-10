@@ -1,0 +1,24 @@
+# Local material must never be committed.
+.env
+.env.*
+!.env.example
+*.private.*
+*.har
+*.pcap
+*.log
+*.jsonl
+*.pem
+*.key
+*.pfx
+assets/
+profile/
+userdata*/
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+dist/
+build/

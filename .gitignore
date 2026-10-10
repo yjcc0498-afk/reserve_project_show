@@ -1,0 +1,12 @@
+*.private.*
+*.har
+*.pcap
+*.log
+*.jsonl
+.env*
+*.pem
+*.key
+.venv/
+venv/
+__pycache__/
+*.pyc
