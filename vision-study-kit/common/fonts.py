@@ -9,15 +9,14 @@ from __future__ import annotations
 
 import os
 from functools import lru_cache
+from pathlib import Path
 
 from PIL import ImageFont
 
 # 按优先级尝试；Windows 在前，Linux 兜底
 _FONT_CANDIDATES = [
-    r"LOCAL_WORKSPACE",      # 微软雅黑（Win 7+ 一般都有）
-    r"LOCAL_WORKSPACE",
-    r"LOCAL_WORKSPACE",    # 黑体
-    r"LOCAL_WORKSPACE",    # 宋体
+    *[str(Path(os.environ.get("WINDIR", "/Windows")) / "Fonts" / name)
+      for name in ("msyh.ttc", "msyhbd.ttc", "simhei.ttf", "simsun.ttc")],
     "/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc",
     "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc",
     "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
